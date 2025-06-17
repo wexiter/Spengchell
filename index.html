@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+      body, html {
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        font:  15px;
+        color:#fff;
+        
+        font-weight:900;
+        font-size:10px;
+        font-family: 'Poppins', sans-serif;
+        -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+      }
+      .box {
+        -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+        height:360px;
+        width:300px;
+        border:1px solid rgba(103,103,103,.39);
+        border-top:0px solid rgba(255,255,255,.4);
+        background:rgba(0,0,0,.81);
+        
+
+      }
+      .lan {
+        -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+        width:300px;
+        height:15px;
+        background:rgba(89,98,204,.51);
+        border:1px solid rgba(103,103,103,.39);
+        border-bottom:0px solid rgba(146,146,146,.83);
+        position:absolute;
+        
+        font-weight:1500;
+        text-align:center;
+        margin: 0px;
+        padding:2px 0px 0 0px ;
+        
+  
+        
+        
+  
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+  color:black;
+      }
+      .kq {
+height:15px;
+      }
+      
+ details {
+   -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+   width:300px;
+   position:relative;
+margin:3px 0 0 3.5px;
+top:5px;
+outline:none;
+
+
+      }
+      details[type=menu] {
+
+        -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+        
+outline:none;
+      }
+      
+summary{
+  -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+  position:relative;
+ width:280px; 
+ padding:0 0 2px 12px; 
+ background:rgba(89,99,204,.51);
+  margin:0 0 0 -7px;
+
+  font-size:15px;
+height:16px;
+  left:7px;
+  top:-2px;
+  outline:none;
+      }
+      summary:hover{
+        
+background:rgba(93,104,215,.4);
+
+-moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+      }
+      .font {
+position:absolute;
+     font-size:9px;  
+      top:2px;
+
+      }
+          .font2 {
+        text-align:center;
+        font-size:8px;
+        
+        left:120px;
+       
+        margin:0px 0 0px 0;
+        position:absolute;
+        
+        
+
+      }
+      
+      .mycheckbox input[type="checkbox"]{
+    display: none;
+        -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+}
+input[type=checkbox]{
+        vertical-align:middle;
+height: 17px;
+        
+        width:17px;
+background:rgba(255,255,255,.25);
+margin-top:0px;
+margin-left:5px;
+margin-right:5px; 
+border-radius:0;
+      }
+      input[type=radio]{
+        -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+        vertical-align:middle;
+height: 17px;
+        
+        width:17px;
+background:rgba(255,255,255,.25);
+margin-top:0px;
+margin-left:5px;
+margin-right:5px; 
+border-radius:100%;
+      }
+      input[type=checkbox]:checked{
+background:rgba(211,211,211,.84);
+
+      }
+      input {
+        
+        -moz-user-select: none;
+-ms-user-select: none;
+          -webkit-appearance: none;
+background:transparent;
+        -webkit-user-select: none;
+            user-select: none;
+    
+      }
+      input[type=button] {
+        -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+color:#fff;
+height:17px;
+        width:75px;
+        font-size:9px;
+        border-radius:0;
+        background:rgba(100,111,230,.34);
+        border:1px solid rgba(255,255,255,.1);
+
+      }
+          .icon-span{
+      display: inline-block;
+      background-color: #fff;
+      border-radius: 4px;
+      border: 2px solid #7f7f7f;
+      position: relative;
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+    }
+    .icon-span::after{
+      border: 2px solid transparent;
+      border-left: 0;
+      border-top: 0;
+      content: " ";
+      top: 2px;
+      left: 5px;
+      position: absolute;
+      width: 4px;
+      height: 8px;
+      -webkit-transform: rotate(45deg) scale(0);
+      transform: rotate(45deg) scale(0);
+      -webkit-transition: -webkit-transform .2s;
+      transition: -webkit-transform .2s;
+      transition: transform .2s;
+      transition: transform .2s, -webkit-transform .2s;
+    }
+    .icon-span-select{}
+    .icon-span-select::after{
+      border-color: #fff;
+      -webkit-transform: rotate(45deg) scale(1);
+      transform: rotate(45deg) scale(1);
+    }
+            input[type=range] {
+  height:13px;
+    -moz-user-select: none;
+-ms-user-select: none;
+   user-select:none;
+
+  -webkit-appearance: none;
+}
+      input[type=range]::-webkit-slider-runnable-track:hover{
+background:rgba(89,98,204,.51);
+
+
+
+      }
+  
+
+.hongse {
+      position:relative;
+height:15px;
+  width:15px;
+  top:-2px;
+  border:0.5px solid rgba(211,211,211,.84);
+background:red;
+  display:flex;
+  flex:end;
+  display: inline-block;
+  
+      }
+
+.lvse {
+  position:relative;
+background:#19ff00;
+height:15px;
+  width:15px;
+  border:0.5px solid rgba(211,211,211,.84);
+  top:0px;
+  display:flex;
+  flex:end;
+  display: inline-block;
+      }
+.f1{
+position: relative;
+  top:-6px;
+display: inline-block;
+
+      }
+  .f2{
+  position: relative;
+  top:-5px;
+display: inline-block;
+
+      }
+input[type=range]:focus {
+      
+   user-select:none;
+  outline: none;
+}
+   *:not(input, checkbox, textarea summary details) {
+            /*禁止文本选择*/
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+    
+      }
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+  -moz-user-select: none;
+-ms-user-select: none;
+  height:  17px;
+  cursor: pointer;
+  margin:0 0 0 20px;
+  
+  background: rgba(255,255,255,.1);
+  border-radius: 0px
+  border: 0px solid rgba(255,255,255,.09);
+        
+   user-select:none;
+  padding:2px 2px 0 2px;
+}
+      input[type=range]::-webkit-slider-thumb {
+        -moz-user-select: none;
+-ms-user-select: none;
+        
+          -webkit-appearance: none;
+    width: 10px;	height: 13px;
+border-radius:0;
+ padding:0px;   
+border:0px solid #000;
+box-shadow:100;
+  background: rgba(211,211,211,.84);
+  cursor: pointer;
+  -webkit-appearance: none;
+        
+
+   user-select:none;
+  }
+      .font3 {
+position: relative;
+top:-7px;
+      }
+      .slidercenter{
+pointer-events: none;
+font-size: 9px;
+color: red;
+position:relative;
+top: -3px;
+left: 130px;
+}
+      .slidercenter2{
+pointer-events: none;
+font-size: 9px;
+color: red;
+position:relative;
+top: 21px;
+left: 200px;
+}
+      .slidercenter3{
+pointer-events: none;
+font-size: 9px;
+color: red;
+position:relative;
+top: 40px;
+left: 175px;
+}
+     .font4 {
+
+position:relative;
+top:-20px;
+       left:50px;
+
+
+      }
+           .font5 {
+
+position:relative;
+top:-30px;
+       left:50px;
+
+
+      }
+       .font6 {
+position: relative;
+top:-4px;
+    </style>
+   <script>
+
+    
+var w=320;
+ var h=370;
+               var x=(window.screen.height -370)/0.960;
+               var y=(window.screen.width -340)/0;
+                setWindowRect(x, y, w, h);
+
+    
+    
+    
+    </script>
+  </head>
+  <body>
+    <div class=kq> </div>
+    <div class=lan><span  class=font2 >🔥Free Fire🔥 Hack🇰🇭</span></div>
+    <div class=box>
+    <br><br>
+  <details type=menu><summary><span class=font>✅មុខងារទី1</span></summary>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">Showbox</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">Show connections</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">Show health bar</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">Show weapons</label><br>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">displayname</label><span style=color:transparent;>@</span>
+  <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">show death</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">Show sleep</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">nearby enemies</label><br>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">Display framerate</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">One click battle</label>
+
+      </details>  
+      
+      <details type=menu><summary><span class=font>✅មុខងារទី2</span></summary>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">safe</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">blacksmith bench</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">储存箱</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">大箱子</label><br>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">小箱子</label><span style=color:transparent;>@</span>
+  <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">物品包</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">机床</label><span style=color:transparent;>@</span><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">研磨器</label><br>
+            <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">风干箱</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">精炼炉</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">实验桌</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">工业锅</label><br>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">烹饪锅</label><span style=color:transparent;>@</span>
+  <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">小花瓶</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">大花瓶</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">床</label><br>
+            <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">睡袋</label><span style=color:transparent;>@</span><span style=color:transparent;>,,,</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">自动炮塔</label><span style=color:transparent;>,</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">加特林</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">投石器</label><br>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">玛瑙螺</label><span style=color:transparent;>@</span>
+  <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">显示恐龙</label><span style=color:transparent;>,</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">己方不显</label><span style=color:transparent;>@</span>
+    
+
+      </details>  
+        <details type=menu><summary><span class=font>មុខងារទី✅3</span></summary>
+
+<label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="anniu76()">一键天亮</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">水下开枪</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">模拟会员</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">狙击连发</label><br>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">子弹追踪</label><span style=color:transparent;>@</span>
+  <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">智能卡空</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">自动换甲</label><span style=color:transparent;>@</span>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">Automatically drink medicine</label><br>
+    <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="dat3(this)">Auto key</label><span style=color:transparent;>@</span><input type=button value=Arrange automatic buttons>
+          <br><br>
+<input type=button style=width:150px;border:0;background:rgba(255,255,255,.12); value=One-click upgrade (click next to the experience box) onclick=" anniu76()">
+      </details>  
+        <details type=menu open><summary><span class=font>4</span></summary>
+
+<span class=font3>Global acceleration</span>   <span id="numvalue1" class="slidercenter" >1.000</span><input type="range" id=silder1 style=width:210px; min="1" max="6" step="0.0001" value="1.000" onchange=Speedf(this)><br>
+    
+          <span class=font3>luis7.ff ativar</span>  <span id="numvalue2" class="slidercenter" >1.000</span><input type=range id=silder2 style=width:210px; min="1" max="6" step="0.0001" value="1.000"onchange=speedn(this)><br>
+        
+          <span class=font3>物品距离</span>  <span id="numvalue3" class="slidercenter" >600.0</span><input type=range id=silder3 style=width:210px; min="1" max="30" value="30" step="0.0001" onchange=(this)><br>
+          
+          <span class=font3>luis7ativar</span>   <span id="numvalue4" class="slidercenter" >1.250</span><input type=range id=silder4 style=width:210px; min="90" max="125" step="0.0001" value="100" onchange=Fovq(this)><br>
+       
+<span class=font3>视old luiss7</span>   <span id="numvalue5" class="slidercenter" >1.000</span><input type=range style=width:210px; min="1" max="30" step="0.0001" value="1" onchange=Fov(this)><br>
+       
+          <span class=font3>游戏帧率</span>   <span id="numvalue6" class="slidercenter" >60.00</span><input type=range style=width:210px; min="1" max="60" step="0.0001" value="60" onchange=fps(this)><br>
+       
+          <span class=font3>人物大头</span>   <span id="numvalue7" class="slidercenter" >1.000</span><input type=range style=width:210px; min="1" max="30" step="0.0001" value="0" onchange=bighead(this)><br>
+       
+          <span class=font3>aimlook40%</span><span id="numvalue8" class="slidercenter" > 20.00</span><input type=range style=width:210px; min="1" max="100" step="0.0001" value="20" onchange=ziti() ><br>   <span id="numvalue9" class="slidercenter2" >0.000</span>   <span id="numvalue10" class="slidercenter3" >0.000</span><span style=color:transparent;>@aaaa</span><label><input class="btn"type="radio"onclick="dat3(this)">aimlook30%</label><span style=color:transparent;>@</span>
+    <label><input class="btn"type="radio"onclick="dat3(this)">aimlook20%</label><span style=color:transparent;>@</span>
+    <label><input class="btn"type="radio"onclick="dat3(this)" checked>超高</label><span style=color:transparent;>@</span>
+    <label><input class="btn"type="radio"onclick="dat3(this)">aimbot50%</label><br>
+      
+          <div class=hongse></div><div class=f1>  ＜-aimbot40%-＞</div>
+           <input type=range class=yanse id=silder9 style=width:135px; min="0" max="60" value="0.0" step="0.0001" onchange=wupin()>
+          <div>
+               
+          </div>
+          <div class=lvse></div><div class=f2>  ＜-aimbot30%-＞</div> <input type=range id=silder10 style=width:135px; min="0" max="60" value="0" step="0.0001" onchange=wupin()>    
+<div>
+ 
+          </div>
+      </details>  
+        <details type=menu><summary><span class=font>✅Aimbot10%</span></summary>
+
+          <span class=font6>点击后激活管理员菜单</span><span style=color:transparent;>@qqq</span><input type=button style=width:80px value=激活管理员菜单
+<br>
+  <label><input class="switch-btn switch-btn animbg"type="checkbox"onclick="rtSpam()' aimbot20€</label><br>
+    <span class=font3>火神叠加</span>   <span id="numvalue7" class="slidercenter" >1</span><input type=range style=width:210px; min="1" max="20" step="0.0001" value="0" onchange=()><br>
+
+      </details>  
+      
+   <script>
+setButtonImage('https://cdn.discordapp.com/attachments/995533488906317854/1002471871670911026/04B4C669-57EE-4EBA-A562-D9A4488AA412-removebg-preview.png');
+</script> 
+<script>
+  function Speedf(input)
+{
+if (typeof addr84 === 'undefined'){
+        h5gg.clearResults();
+        h5gg.searchNumber('-980', 'F32', '0x00000000', '0x400000000');
+        h5gg.searchNearby('0.0005', 'F32', '0x164');
+        h5gg.searchNumber('-980', 'F32', '0x00000000', '0x400000000');
+h5gg.getResults('100','0', 'F32');
+
+count89 = h5gg.getResultsCount();
+r89 = h5gg.getResults(count89);
+  
+for (var i = 0; i < count89; i++) {
+  addr89 = r89[i].address;
+addr84=addr89 - -0x154
+  h5gg.setValue(addr84,input.value*1,'F32');
+  ;
+
+
+h5gg.clearResults()
+}}
+else{
+
+  
+
+  h5gg.setValue(addr84,input.value*1,'F32');
+}}
+
+
+
+
+
+
+
+
+
+
+ 
+
+</script>
+<script>
+function speedn(input) {
+                        if (typeof addr3 === 'undefined') {
+                            h5gg.clearResults();
+                            h5gg.searchNumber("-2373.004", 'F32', '0x00000000', '0x200000000');
+                            h5gg.searchNearby("1", 'F32', '0x100');
+                            h5gg.searchNumber("1", 'F32', '0x00000000', '0x200000000');
+                            h5gg.getResults('1', 'F32');
+                            count3 = h5gg.getResultsCount();
+                            r3 = h5gg.getResults(count3);
+                            for (var i = 0; i < count3; i++) {
+                                addr3 = r3[i].address;
+                                h5gg.setValue(addr3, input.value * 1, 'F32');
+                                h5gg.clearResults()
+                            }
+                        }
+                        else {
+                            h5gg.setValue(addr3, input.value * 1, 'F32');
+                        }
+                    }
+  
+  </script>
+  <script>
+
+                    function Fov(input) {
+                        if (typeof addr8 === 'undefined') {
+                            h5gg.clearResults();
+                            h5gg.searchNumber("256", 'F32', '0x00000000', '0x200000000');
+                            h5gg.searchNearby("4", 'I32', '0x20');
+                            h5gg.searchNearby('0.8', 'F32', '0x20');
+                            h5gg.searchNumber("256", 'F32', '0x00000000', '0x200000000');
+                            h5gg.getResults('1', 'F32');
+                            count8 = h5gg.getResultsCount();
+                            r8 = h5gg.getResults(count8);
+                            for (var i = 0; i < count8; i++) {
+                                addr8 = r8[i].address;
+                                h5gg.setValue(addr8, input.value * 256, 'F32');
+                                h5gg.clearResults()
+                            }
+                        }
+                        else {
+                            h5gg.setValue(addr8, input.value * 256, 'F32');
+                        }
+                    };
+
+                </script>
+          <script>
+
+
+
+function Fovq(input) {
+if (typeof addr77 === 'undefined') {
+  h5gg.clearResults();
+ h5gg.searchNumber("89.9", "F32", "0x00000000", "0x200000000");
+ h5gg.searchNearby("90", "F32", "0x100");
+ h5gg.searchNumber("90", "F32", "0x00000000", "0x200000000");
+ h5gg.getResults("100", "F32");
+                            
+                count77 = h5gg.getResultsCount();
+                            r77 = h5gg.getResults(count77);
+                            for (var i = 0; i < count77; i++) {
+                                addr77 = r77[i].address;
+                              h5gg.setValue(addr77, input.value, 'F32');
+  h5gg.clearResults()
+                            }
+                     }
+                      else{
+           
+                            
+                        
+                                h5gg.setValue(addr77, input.value, 'F32');
+                                
+                            }
+      
+                     };
+</script>
+<script>
+function fps(inputq) {
+if (typeof addr12 === 'undefined') {
+  h5gg.clearResults();
+ 
+h5gg.searchNumber("-1.70142e+38", 'F32', '0x00000000', '0x400000000');
+h5gg.searchNearby("4.243991582918676e-314", 'F64', '0x100');
+h5gg.searchNearby("30", 'F32', '0x20');
+h5gg.searchNumber("30", 'F32', '0x00000000', '0x200000000');
+h5gg.editAll('60', 'F32');  
+                            
+                count12 = h5gg.getResultsCount();
+                            r12 = h5gg.getResults(count12);
+                            for (var i = 0; i < count12; i++) {
+                                addr12 = r12[i].address;
+                              h5gg.setValue(addr12, inputq.value, 'F32');
+  h5gg.clearResults()
+                            }
+                     }
+                      else{
+           
+                            
+                        
+                                h5gg.setValue(addr12, inputq.value, 'F32');
+                                
+                            }
+      
+                     };
+    
+</script>
+    </div>
+  </body>
+</html>
